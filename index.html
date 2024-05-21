@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="stylesheet" href="assets/css/slide.css" />
+    <link rel="icon" href="assets/img/doainfo.png" type="image/x-icon" />
+    <title>DOAINFO - Início</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>DOAINFO</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+              <a> Doações <span>&#9662;</span></a>
+              <div class="dropdown-content">
+                <a href="medula.html" target="_self" rel="noopener noreferrer"
+                  >Medula óssea</a
+                >
+                <a href="plaqueta.html" target="_self" rel="noopener noreferrer"
+                  >Plaquetas</a
+                >
+                <a href="plasma.html" target="_self" rel="noopener noreferrer"
+                  >Plasma</a
+                >
+                <a href="sangue.html" target="_self" rel="noopener noreferrer"
+                  >Sangue</a
+                >
+              </div>
+            </li>
+            <li>
+              <a href="contato.html" target="_self" rel="noopener noreferrer"
+                >Contato</a
+              >
+            </li>
+            <li>
+              <a href="faq.html" target="_self" rel="noopener noreferrer"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a href="doacao.html" target="_self" rel="noopener noreferrer"
+                >Nos apoie
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="slideshow-wrapper">
+        <div class="slideshow-container">
+          <img
+            src="https://i.pinimg.com/originals/96/4a/20/964a202c03a37b001f40a98ce2d20b10.png"
+            alt="Image 1"
+          />
+          <img
+            src="https://i.pinimg.com/originals/7b/77/2c/7b772c94908fa0b4d58f732c1b7806f8.png"
+            alt="Image 2"
+          />
+          <div class="nav">
+            <button class="prev"><</button>
+            <button class="next">></button>
+          </div>
+          <script>
+            const slideshowContainer = document.querySelector(
+              ".slideshow-container"
+            );
+            const images = slideshowContainer.querySelectorAll("img");
+            const navPrev = document.querySelector(".prev");
+            const navNext = document.querySelector(".next");
+
+            let currentImageIndex = 0;
+
+            function showImage(index) {
+              images.forEach((image, i) => {
+                image.style.display = i === index ? "block" : "none";
+              });
+            }
+
+            navPrev.addEventListener("click", () => {
+              currentImageIndex =
+                (currentImageIndex - 1 + images.length) % images.length;
+              showImage(currentImageIndex);
+            });
+
+            navNext.addEventListener("click", () => {
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              showImage(currentImageIndex);
+            });
+
+            // Seta o tempo que a imagem vai ficar
+            setInterval(() => {
+              currentImageIndex = (currentImageIndex + 1) % images.length;
+              showImage(currentImageIndex);
+            }, 5000); // 5 segundos
+          </script>
+        </div>
+      </div>
+      <main>
+        <h2 class="first-heading">Doação de sangue</h2>
+        <br />
+        <p>
+          A doação de sangue é um ato de generosidade que salva vidas. Cada
+          doação pode representar a diferença entre a vida e a morte para alguém
+          em necessidade. É um gesto simples, mas de uma importância
+          imensurável.
+        </p>
+        <p>
+          Imagine o impacto positivo que uma bolsa de sangue pode ter na vida de
+          alguém que passa por uma cirurgia de emergência, uma mulher em
+          trabalho de parto complicado, uma criança com anemia ou um paciente
+          com câncer. É a essência da solidariedade humana se manifestando em um
+          ato tão vital.
+        </p>
+        <p>
+          Além de ser fundamental em situações de urgência, a doação de sangue
+          também é essencial para o tratamento de diversas condições de saúde
+          crônicas. Pacientes com doenças do sangue, como a talassemia e a
+          hemofilia, dependem regularmente de transfusões para viver com
+          qualidade.
+        </p>
+        <p>
+          Portanto, ser um doador de sangue é ser um verdadeiro herói anônimo,
+          alguém que oferece um pouco de si para dar uma chance a quem precisa.
+          É um gesto que não custa muito tempo, mas que pode fazer toda a
+          diferença no mundo de alguém. Por isso, se você pode doar, considere
+          tornar-se um doador regular e contribua para salvar vidas.
+        </p>
+      </main>
+    </section>
+  </body>
+</html>

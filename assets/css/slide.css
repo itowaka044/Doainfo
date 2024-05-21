@@ -1,0 +1,40 @@
+.slideshow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  height: 60vh;
+
+  /* faz o wrapper ocupar todo o espaço do slide */
+}
+
+.slideshow-container {
+  position: relative;
+  height: 100%;
+}
+
+.slideshow-container img {
+  display: none; /* esconde as imagens menos a primeira */
+  height: 100%;
+}
+
+.slideshow-container img:first-child {
+  display: block; /* mostra a primeira imagem */
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.prev,
+.next {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
